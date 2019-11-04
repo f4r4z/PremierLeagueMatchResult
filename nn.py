@@ -35,19 +35,11 @@ clf.fit(x_train, y_train)
 yhat = clf.predict(x_test)
 
 # accuracy calculation
-total = 0
-correct = 0
-
-list = y_test.values
-
-for i in range(125):
-    total += 1
-    if yhat[i] == list[i]:
-        correct += 1
+score = clf.score(x_test, y_test)
+print(score)
 
 # print(list.tolist())
 # print(yhat.tolist())
 
-print(correct / total)
 # original_headers = list(df.columns.values)
 
